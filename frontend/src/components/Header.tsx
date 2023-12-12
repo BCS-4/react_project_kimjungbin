@@ -1,17 +1,18 @@
 import { useSDK } from "@metamask/sdk-react";
-import { FC, useState } from "react";
+import { Dispatch, FC, SetStateAction } from "react";
 import { Link } from "react-router-dom";
 
-const Header: FC = () => {
-  const [account, setAccount] = useState<string>("");
+interface HeaderProps {
+  account: string;
+  setAccount: Dispatch<SetStateAction<string>>;
+}
 
+const Header: FC<HeaderProps> = ({ account, setAccount }) => {
   const { sdk } = useSDK();
 
   const onClickMetaMask = async () => {
     try {
-      const accounts = await sdk?.connect();
-      
-      if(!accounts[0] || )
+      const accounts: any = await sdk?.connect();
 
       setAccount(accounts[0]);
     } catch (error) {
@@ -27,7 +28,19 @@ const Header: FC = () => {
         <Link to="/sale">Sale</Link>
       </div>
       <div>
-        <button onClick={onClickMetaMask}>MetaMask Login</button>
+        {account ? (
+          <div>
+            <span>
+              {account.substring(0, 7)}...
+              {account.substring(account.length - 5)}
+            </span>
+            <button className="ml-2" onClick={() => setAccount("")}>
+              Logout
+            </button>
+          </div>
+        ) : (
+          <button onClick={onClickMetaMask}>MetaMask Login</button>
+        )}
       </div>
     </header>
   );
