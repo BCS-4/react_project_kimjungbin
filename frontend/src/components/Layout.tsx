@@ -6,12 +6,6 @@ import { useSDK } from "@metamask/sdk-react";
 import Header from "./Header";
 import mintNftAbi from "../abis/mintNftAbi.json";
 
-export interface OutletContext {
-  account: string;
-  web3: Web3;
-  mintNftContract: Contract<ContractAbi>;
-}
-
 const Layout: FC = () => {
   const [account, setAccount] = useState<string>("");
   const [web3, setWeb3] = useState<Web3>();
@@ -32,13 +26,13 @@ const Layout: FC = () => {
     setMintNftContract(
       new web3.eth.Contract(
         mintNftAbi,
-        "0x1e3762e95365395f862241e7a4099b94bed2afaf"
+        "0xF58605CE70C1a7F2e21F9b9535eBf83C39b6e30E"
       )
     );
   }, [web3]);
 
   return (
-    <div className="bg-red-100 min-h-screen max-w-screen-md mx-auto flex flex-col">
+    <div className="min-h-screen max-w-screen-md mx-auto flex flex-col">
       <Header account={account} setAccount={setAccount} />
       <Outlet context={{ account, web3, mintNftContract }} />
     </div>
