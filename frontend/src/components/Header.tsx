@@ -21,11 +21,26 @@ const Header: FC<HeaderProps> = ({ account, setAccount }) => {
   };
 
   return (
-    <header className="p-2 flex justify-between">
+    <header className="p-2 flex justify-between font-DOS">
       <div className="flex gap-4">
-        <Link to="/">Home</Link>
-        <Link to="/my">My</Link>
-        <Link to="/sale">Sale</Link>
+        <Link
+          className="px-4 rounded-full border flex justify-center items-center"
+          to="/"
+        >
+          Home
+        </Link>
+        <Link
+          className="px-4 rounded-full border flex justify-center items-center"
+          to="/my"
+        >
+          My
+        </Link>
+        <Link
+          className="px-4 rounded-full border flex justify-center items-center"
+          to="/sale"
+        >
+          Sale
+        </Link>
       </div>
       <div>
         {account ? (
@@ -39,7 +54,12 @@ const Header: FC<HeaderProps> = ({ account, setAccount }) => {
             </button>
           </div>
         ) : (
-          <button onClick={onClickMetaMask}>MetaMask Login</button>
+          <button
+            className="px-4 rounded-full border flex justify-center items-center"
+            onClick={onClickMetaMask}
+          >
+            MetaMask Login
+          </button>
         )}
       </div>
     </header>
