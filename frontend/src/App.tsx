@@ -14,7 +14,6 @@ const App: FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/my" element={<My />} />
           <Route path="/sale" element={<Sale />} />
-
           <Route path="/detail/:tokenId" element={<Detail />} />
         </Route>
       </Routes>

@@ -1,3 +1,5 @@
 # PFP Project
 
-Contract Address - 0x8439715d90725f8a0a1cf4eca3e3aa50c757f25e
+Mint NFT Contract Address - 0x8439715d90725f8a0a1cf4eca3e3aa50c757f25e
+
+Sale NFT Contract Address - 0x6C0f5D9B7801f65555174367C5546F22cB4FA692
