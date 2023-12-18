@@ -42,6 +42,9 @@ const Header: FC<HeaderProps> = ({ account, setAccount }) => {
           Sale
         </Link>
       </div>
+      <div className="text-4xl font-Orbit bg-white rounded-lg border-t-2 border-gray-600 border-b-2 px-4 py-2 inline">
+        NFT MARKET
+      </div>
       <div>
         {account ? (
           <div>

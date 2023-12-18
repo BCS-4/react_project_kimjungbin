@@ -85,7 +85,7 @@ const Home: FC = () => {
 
   return (
     <>
-      <div className="grow font-DOS">
+      <div className="grow font-DOS bg-pink-200 mt-10">
         <ul className="p-8 grid grid-cols-2 gap-8">
           {metadataArray?.map((v, i) => (
             <NftCard
