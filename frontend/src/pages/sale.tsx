@@ -42,7 +42,7 @@ const Sale: FC = () => {
   }, [saleNftContract]);
 
   return (
-    <div className="grow font-DOS">
+    <div className="grow font-DOS bg-yellow-100">
       <div className="text-center py-8">
         <h1 className="font-bold text-2xl">Sale NFTs</h1>
       </div>

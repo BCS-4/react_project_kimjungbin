@@ -30,7 +30,7 @@ const Header: FC<HeaderProps> = ({ account, setAccount }) => {
           Home
         </Link>
         <Link
-          className="px-4 rounded-full border flex justify-center items-center"
+          className="px-5 rounded-full border flex justify-center items-center"
           to="/my"
         >
           My
